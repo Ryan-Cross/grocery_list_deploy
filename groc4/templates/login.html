@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block icon %} <img src="static/keys.jpg" class="icon"> {% endblock %}
+{% block content %}
+
+    <div class="login_container">
+        <form action="" method="post" class="login_form_container">
+            {{ form.hidden_tag() }}
+            <p class="login_username">
+                {{ form.username.label }}
+                {{ form.username }}
+            </p>
+            <p class="login_password">
+                {{ form.password.label }}
+                {{ form.password }}
+            </p>
+            <p class="login_remember">
+                {{ form.remember_me.label }}
+                {{ form.remember_me }}
+            </p>
+            <p class="login_submit">
+                {{ form.submit }}
+            </p>
+        </form>
+        <a href= "{{ url_for('register') }}" class="login_go_reg">I'm a new user I need to register.</a>
+    </div>
+
+{% endblock %}

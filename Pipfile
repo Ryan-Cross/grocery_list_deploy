@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "==1.0.2"
+flask-mail = "==0.9.1"
+sqlalchemy = "==1.2.14"
+flask-sqlalchemy = "==2.3.1"
+flask-login = "==0.4.1"
+wtforms = "==2.2.1"
+flask-wtf = "==0.14.2"
+gunicorn = "*"
+psycopg2 = "*"
+
+[requires]
+python_version = "3.6"

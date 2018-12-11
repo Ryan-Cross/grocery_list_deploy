@@ -1,0 +1,385 @@
+/*  begin zeroing out >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/*  end zeroing out >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+/* begin base template for header including nav$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+.base_container{
+  height:100vh;
+  width:100vw;
+  display: grid;
+  grid: 40vh 1fr / 1fr;
+}
+.header{
+    /*height allocated from parent grid in .base_container is 40vh*/
+    background:red;
+    color: white;
+    font-family: 'Supermercado One', cursive;
+    display: grid;
+    grid: 8fr 4fr 1fr/1fr;
+}
+.header_pic{
+  display: grid;
+  place-items: center center;
+}
+.icon{
+    height: 18vh;
+    border-radius: 50%;
+    background: white;
+    object-fit:contain;
+}
+.base_title{
+  font-size: 8vh;
+  display: grid;
+  place-items: center center;
+}
+.nav{
+  display: grid;
+  grid: 1fr/repeat(6, 1fr);
+  place-items: center center;
+  font-size: 2vh;
+}
+
+input {
+    font-size: 2vh;
+    color: red;
+}
+/*end base template $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+
+
+/*begin homepage xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.portrait{
+    height: 20vh;
+}
+.home_container{
+    height: 60vh;
+    background:white;
+    color: red;
+    font-size: 2.5vh;
+    display: grid;
+    grid-gap: 1vh 2vh;
+    grid: 1fr 21vh 10fr 10fr 10fr 1fr/1fr 1fr 5fr 1fr;
+    place-items: center start;
+}
+.home_portrait{
+    grid-area: 2/2/2/3;
+    /*place-self: center center;*/
+}
+.home_author{
+    grid-area: 2/3/2/4;
+}
+.home_project{
+    grid-area: 3/2/3/4;
+}
+.home_motives{
+    grid-area: 4/2/4/4;
+}
+.home_explore{
+    grid-area: 5/2/5/4;
+}
+/*end homepage xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+/*start fliers page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+.fliers_container{
+    height: 60vh;
+    background:white;
+    color: red;
+    font-size: 4vh;
+    font-family: 'Supermercado One', cursive;
+    display: grid;
+    grid: 1fr 6fr 6fr 6fr 6fr 1fr/1fr 10fr 1fr;
+    place-items: center center;
+}
+.banner{
+    height:8vh;
+}
+.fliers_blurb{
+    grid-area: 2/2/2/3;
+}
+.fliers_costco{
+    grid-area: 3/2/3/3;
+}
+.fliers_saveon{
+    grid-area: 4/2/4/3;
+}
+.fliers_superstore{
+    grid-area: 5/2/5/3;
+}
+
+/*end fliers page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
+
+/*begin information page ###########################################################*/
+.info_container{
+    background:white;
+    margin: 10px;
+    color: red;
+    font-size: 1.5vmax;
+    display: grid;
+    grid: auto/1fr 7fr;
+    place-items:  center start;
+    grid-gap: 2vh 1vh;
+}
+.info_image{
+    height: 20vh;
+    width: 20vh;
+    object-fit: contain;
+}
+.info_header{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.info_p{
+    padding: 10px;
+}
+.info_list{
+    list-style-position: inside;
+    margin-left: 1vh;
+}
+
+
+/*end information page ###########################################################*/
+
+
+/*begin login page ###########################################################*/
+.login_container{
+    background:white;
+    color: red;
+    font-size: 2vh;
+    font-family: 'Supermercado One', cursive;
+    display: grid;
+    grid-gap: 2vh 2vh;
+    grid:3vh 20vh 1fr 3vh/1fr;
+    place-items:  center center;
+
+ }
+.login_go_reg{
+    grid-row-start: 3;
+}
+.login_form_container{
+    grid-row-start: 2;
+    display: grid;
+    grid: ". . ."
+    ". login_username ."
+    ". login_password ."
+    ". login_remember ."
+    ". login_submit ."
+    ". . .";
+    grid-gap: 2vh 2vh;
+}
+.login_username{
+    grid-area: login_username;
+}
+.login_password {
+    grid-area: login_password ;
+}
+.login_remember{
+    grid-area: login_remember;
+}
+.login_submit{
+    grid-area: login_submit;
+}
+/*end login page ###########################################################*/
+
+
+/*begin listpage |||||||||||||||||||||||||||||||||||||||||||*/
+.list_container{
+    background:white;
+    margin: 10px;
+    color: red;
+    font-family: 'Supermercado One', cursive;
+    font-size: 2vh;
+    display: grid;
+    grid:"list_left list_right";
+    grid-gap: 3vh 3vh;
+ }
+.list_left{
+    grid-area:list_left;
+    display: grid;
+    grid: "list_user"
+    "list_logout"
+    "list_form";
+    place-items: center center;
+    grid-gap: 3vh 3vh;
+}
+.list_form{
+    grid-area: list_form;
+    display: grid;
+    grid: "list_item"
+    "list_amount"
+    "list_submit";
+    grid-gap: 3vh 3vh;
+
+}
+.list_user{
+    grid-area: list_user;
+}
+.list_logout{
+    grid-area: list_logout;
+}
+.list_item{
+    grid-area: list_item;
+    place_items: center end;
+}
+.list_amount{
+    grid-area: list_amount;
+    place_items: center end;
+}
+.list_submit{
+    grid-area: list_submit;
+}
+.list_right{
+    grid-area:list_right;
+    display: grid;
+    place-items:  center center;
+}
+.list_background{
+    background: red;
+}
+.list_list{
+    font-family: 'Supermercado One', cursive;
+    color: white;
+    background: red;
+    font-size: 1.5vh;
+    /*margin:2vh;*/
+    padding: .5vh;
+    display: block;
+}
+/*end listpage |||||||||||||||||||||||||||||||||||||||||||*/
+
+/*begin amend_page |||||||||||||||||||||||||||||||||||||||||||*/
+.amend_container{
+    background:white;
+    margin: 10px;
+    color: red;
+    font-size: 1.5vmax;
+    display: grid;
+    place-items:  center start;
+ }
+/*end amendpage |||||||||||||||||||||||||||||||||||||||||||*/
+
+/*begin finish page !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.finish_container{
+    background:white;
+    margin: 4vh 8vh;
+    color: red;
+    font-family: 'Supermercado One', cursive;
+    font-size: 3vh;
+    display: grid;
+    place-items:  center start;
+ }
+
+/*end finish page !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/*begin code page+++++++++++++++++++++++++++++++++++++++++*/
+.code_container{
+    background:white;
+    margin: 1vh 10vh;
+    color: red;
+    font-size: 1.5vmax;
+    display: grid;
+    grid: 1fr/1fr 1fr;
+    place-items:  center center;
+    display:grid;
+}
+.code_link{
+    font-size: 2vh;
+}
+/*end code page+++++++++++++++++++++++++++++++++++++++++*/

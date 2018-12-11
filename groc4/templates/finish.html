@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block icon %} <img src="static/mail.JPG" class="icon"> {% endblock %}
+{% block content %} 
+    <div class="finish_container">
+        <p class="finish_blurb">Ok your list is all done. Here's the item and amount we're sending to your email:</p>
+        <p> </p>
+        <p class="finish_list">
+            {% for item in display %}
+            {% for key in item.keys() %}
+            <p class="finish_list_item">{{ key }} {{ item[key] }}</p>
+            {% endfor %}
+            {% endfor %}
+        </p>
+    </div>
+{% endblock %}

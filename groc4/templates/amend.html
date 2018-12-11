@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block icon %} <img src="static/pink_eraser.jpg" class="icon"> {% endblock %}
+
+{% block content %}
+    <div class="amend_container">
+        <p>Remove entries from the list</p>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.list_item.label }}
+                {{ form.list_item }}
+            </p>
+            <p>
+                {{ form.submit }}
+            </p>
+        </form>
+        <p>
+        Here's the entries on your list so far:
+        </p>
+
+        {% for item in display %}
+            {% for key in item.keys() %}
+                <p>{{ key }} {{ item[key] }}</p>
+            {% endfor %}
+        {% endfor %}
+    </div>
+{% endblock %}

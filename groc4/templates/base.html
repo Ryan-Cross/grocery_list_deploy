@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+            <title>{{ title }}</title>
+        {% else %}
+            <title>Welcome to GroceryList!</title>
+        {% endif %}
+        <link rel="stylesheet" href="static/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
+    </head>
+    <body>
+        <div class="base_container">
+            <div class="header">
+                <div class="header_pic">
+                    {% block icon %}{% endblock %}
+                </div>
+                <div class="base_title">
+                    <p>Grocery List!</p>
+                </div>
+                <div class="nav">
+                    <h3>navigations</h3>
+                    <a href="{{ url_for('home') }}">home</a>
+                    <a href="{{ url_for('fliers') }}">browse fliers</a>
+                    <a href="{{ url_for('list_check_auth') }}">make a list</a>
+                    <a href="{{ url_for('info') }}">about the project</a>
+                    <a href="{{ url_for('code') }}">project code</a>
+                </div>
+            </div>
+            <div class="content">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

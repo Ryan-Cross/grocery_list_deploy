@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block icon %} <img src="static/shopping-list-on-paper.jpg" class="icon"> {% endblock %}
+
+{% block content %}
+    <div class="list_container">
+        <div class="list_left">
+            <p class="list_user">You are logged in as: {{ present_user }}</p>
+            <a href= "{{ url_for('logout') }}" class="list_logout"> log out</a>
+            <form action="" method="post" class="list_form">
+                {{ form.hidden_tag() }}
+                <p class="list_item">
+                    {{ form.item.label }}
+                    {{ form.item }}
+                </p>
+                <p class="list_amount">
+                    {{ form.amount.label }}
+                    {{ form.amount }}
+                </p>
+                <p class="list_submit">
+                    {{ form.submit }}
+                </p>
+            </form>
+        </div>
+        <div class="list_right">
+            <a href="{{ url_for('amend') }}">Amend this list </a>
+            <a href="{{ url_for('finish') }}"> List is finished </a>
+            <p class="list_list">
+                Here's your list so far:
+                {% for item in display %}
+                {% for key in item.keys() %}
+                <p class="list_list">{{ key }} {{ item[key] }}</p>
+                {% endfor %}
+                {% endfor %}
+            </p>
+
+{#            {% for item in display %}#}
+{#            {% for key in item.keys() %}#}
+{#            <p class="list_list">{{ key }} {{ item[key] }}</p>#}
+{#            {% endfor %}#}
+{#            {% endfor %}#}
+
+        </div>
+    </div>
+
+{% endblock %}

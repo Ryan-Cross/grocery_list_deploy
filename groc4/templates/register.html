@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block icon %} <img src="static/keys.jpg" class="icon"> {% endblock %}
+{% block content %}
+    <h1>Here is the registration</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username }}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email }}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password }}
+        </p>
+        <p>
+            {{ form.password2.label }}<br>
+            {{ form.password2 }}
+        </p>
+        <p>
+            {{ form.submit }}
+        </p>
+    </form>
+{% endblock %}
+
+{#class RegistrationForm(FlaskForm):#}
+{#    username = StringField('Username', validators=[DataRequired()])#}
+{#    email = StringField('email', validators=[Email()])#}
+{#    password1 = PasswordField('Password', validators=[DataRequired()])#}
+{#    password2 = PasswordField('Repeat password', validators=[EqualTo(password1)])#}
+{#    submit = SubmitField('Register')#}
