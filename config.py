@@ -10,7 +10,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     ECHO = True
 
-    MAIL_SERVER = 'smtp.mailgun.ord'
+    MAIL_SERVER = 'smtp.mailgun.org'
     MAIL_PORT = 587
     # MAIL_USE_SSL = True
     MAIL_USERNAME = os.getenv("GROCMAILU")
